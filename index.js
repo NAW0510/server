@@ -30,6 +30,7 @@ app.post("/api/generate", async (req, res) => {
   if (!prompt) {
     return res.status(400).json({ error: "Missing 'prompt' in request body" });
   }
+      console.log(apiKey);
   const openrouter = createOpenRouter({
     apiKey: apiKey, // Add your API key here
   });
@@ -51,5 +52,4 @@ app.post("/api/generate", async (req, res) => {
 // Start server
 app.listen(PORT, () => {
   console.log(`🚀 Server running at http://localhost:3000/api/generate`);
-  console.log(apiKey);
 });
