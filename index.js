@@ -4,6 +4,7 @@ import { createOpenRouter } from "@openrouter/ai-sdk-provider";
 import express from "express";
 import dotenv from "dotenv";
 
+
 dotenv.config();
 
 const apiKey = process.env.OPENROUTER_API_KEY;
@@ -50,4 +51,5 @@ app.post("/api/generate", async (req, res) => {
 // Start server
 app.listen(PORT, () => {
   console.log(`🚀 Server running at http://localhost:3000/api/generate`);
+  console.log(apiKey);
 });
